@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Check, Flame, ArrowRight, Sparkles } from "lucide-react";
+import { Check, Flame, ArrowRight } from "lucide-react";
 import { useState } from "react";
-import heroImg from "@/assets/hero-creator.jpg";
+import heroAsset from "@/assets/hero-cover.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
