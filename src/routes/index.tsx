@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Check, Flame, ArrowRight, Sparkles } from "lucide-react";
+import { Check, Flame, ArrowRight } from "lucide-react";
 import { useState } from "react";
-import heroImg from "@/assets/hero-creator.jpg";
+import heroAsset from "@/assets/hero-cover.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -54,39 +54,15 @@ function Landing() {
         </div>
 
         {/* Hero card */}
-        <div className="card-glow relative mt-10 w-full overflow-hidden rounded-3xl border border-border/60 bg-card">
-          <div className="relative aspect-[16/10] w-full">
-            <img
-              src={heroImg}
-              alt="Phong Menly - Doanh nghiệp 1 người với Claude"
-              className="absolute inset-0 h-full w-full object-cover"
-              width={1280}
-              height={896}
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/30 to-transparent md:from-background/80" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-
-            <div className="absolute inset-0 flex flex-col justify-between p-5 md:p-8">
-              <div className="ml-auto max-w-[60%] text-right">
-                <h2 className="font-display text-4xl font-black leading-[0.9] tracking-tight text-foreground drop-shadow-lg md:text-6xl">
-                  DOANH<br />NGHIỆP<br />1 NGƯỜI<br />
-                  <span className="italic font-serif font-semibold text-3xl md:text-5xl text-foreground/90">
-                    with Claude
-                  </span>
-                </h2>
-              </div>
-
-              <div className="flex items-end justify-between gap-3">
-                <div className="text-left text-xs font-medium text-foreground/90 md:text-sm">
-                  Phong Menly · AI Go Global US
-                </div>
-                <div className="pill-border inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold text-accent md:text-sm">
-                  <Sparkles className="h-3.5 w-3.5" />
-                  KOL AI SYSTEM
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="card-glow relative mt-8 w-full overflow-hidden rounded-2xl border border-border/60 bg-card md:mt-10 md:rounded-3xl">
+          <img
+            src={heroAsset.url}
+            alt="KOL AI Go Global - Trang bán hàng Phong Menly"
+            className="block h-auto w-full"
+            width={1920}
+            height={1080}
+            loading="eager"
+          />
         </div>
 
         {/* Feature checks */}
