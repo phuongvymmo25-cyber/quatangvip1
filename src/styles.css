@@ -24,34 +24,36 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-border: var(--border);
+  --color-input: var(--input);
   --color-ring: var(--ring);
   --font-display: "Be Vietnam Pro", "Inter", system-ui, sans-serif;
 }
 
 :root {
   --radius: 1rem;
-  --background: oklch(0.14 0.01 60);
-  --foreground: oklch(0.98 0.005 80);
-  --card: oklch(0.18 0.015 60);
-  --card-foreground: oklch(0.98 0.005 80);
-  --primary: oklch(0.82 0.16 75);
-  --primary-foreground: oklch(0.15 0.02 60);
-  --secondary: oklch(0.25 0.02 60);
-  --secondary-foreground: oklch(0.98 0.005 80);
-  --muted: oklch(0.22 0.015 60);
-  --muted-foreground: oklch(0.68 0.02 70);
-  --accent: oklch(0.78 0.18 60);
-  --accent-foreground: oklch(0.15 0.02 60);
-  --border: oklch(0.28 0.02 70 / 0.6);
-  --ring: oklch(0.82 0.16 75);
+  --background: oklch(0.14 0.01 320);
+  --foreground: oklch(0.98 0.005 320);
+  --card: oklch(0.18 0.02 330);
+  --card-foreground: oklch(0.98 0.005 320);
+  --primary: oklch(0.70 0.22 12);
+  --primary-foreground: oklch(0.99 0.005 320);
+  --secondary: oklch(0.25 0.03 330);
+  --secondary-foreground: oklch(0.98 0.005 320);
+  --muted: oklch(0.22 0.02 330);
+  --muted-foreground: oklch(0.70 0.02 330);
+  --accent: oklch(0.72 0.22 8);
+  --accent-foreground: oklch(0.99 0.005 320);
+  --border: oklch(0.32 0.03 330 / 0.6);
+  --input: oklch(0.25 0.02 330);
+  --ring: oklch(0.72 0.22 8);
 }
 
 @layer base {
   * { border-color: var(--color-border); }
   html, body {
     background:
-      radial-gradient(ellipse at top, oklch(0.22 0.05 70 / 0.4), transparent 60%),
-      radial-gradient(ellipse at bottom, oklch(0.18 0.03 60 / 0.3), transparent 70%),
+      radial-gradient(ellipse at top, oklch(0.30 0.10 10 / 0.35), transparent 60%),
+      radial-gradient(ellipse at bottom, oklch(0.22 0.08 340 / 0.30), transparent 70%),
       var(--color-background);
     background-attachment: fixed;
     color: var(--color-foreground);
@@ -61,28 +63,28 @@
 }
 
 @layer utilities {
-  .text-gradient-gold {
-    background: linear-gradient(180deg, #ffd87a 0%, #f5a623 60%, #c97a1a 100%);
+  .text-gradient-brand {
+    background: linear-gradient(180deg, #ffb199 0%, #ff5e8a 50%, #e83a7a 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
   .btn-glow {
-    background: linear-gradient(180deg, #ffd06b 0%, #f5a623 100%);
+    background: linear-gradient(180deg, #ff9a8b 0%, #ff5e8a 60%, #e83a7a 100%);
     box-shadow:
-      0 0 0 1px rgba(255, 200, 100, 0.4),
-      0 20px 60px -10px rgba(245, 166, 35, 0.55),
-      0 0 80px -10px rgba(245, 166, 35, 0.4);
+      0 0 0 1px rgba(255, 150, 170, 0.4),
+      0 20px 60px -10px rgba(232, 58, 122, 0.55),
+      0 0 80px -10px rgba(255, 94, 138, 0.4);
   }
   .btn-glow:hover { filter: brightness(1.05); }
   .card-glow {
     box-shadow:
-      0 0 0 1px rgba(255, 200, 100, 0.12) inset,
+      0 0 0 1px rgba(255, 150, 170, 0.12) inset,
       0 30px 80px -20px rgba(0,0,0,0.6),
-      0 0 120px -30px rgba(245, 166, 35, 0.25);
+      0 0 120px -30px rgba(232, 58, 122, 0.30);
   }
   .pill-border {
-    border: 1px solid rgba(245, 166, 35, 0.35);
-    background: linear-gradient(180deg, rgba(245,166,35,0.06), rgba(245,166,35,0.02));
+    border: 1px solid rgba(255, 120, 150, 0.40);
+    background: linear-gradient(180deg, rgba(255,94,138,0.08), rgba(255,94,138,0.02));
   }
 }
